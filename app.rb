@@ -11,7 +11,7 @@ class BookmarkManager < Sinatra::Base
   end
 
   get "/" do
-    "Hello"
+    erb :index
   end
 
   
