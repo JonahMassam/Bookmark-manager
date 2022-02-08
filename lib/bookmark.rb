@@ -4,10 +4,6 @@ class Bookmark
   def self.all
     connection = PG.connect(dbname: 'bookmark_manager', user: 'JMMakers', password: '1234')
     result = connection.exec('SELECT * FROM bookmarks')
-    test = []
-    for entry in result do
-      test.append(entry["url"])
-    end
-    return test
+    result.map { |bookmark| bookmark["url"] }
   end
 end
