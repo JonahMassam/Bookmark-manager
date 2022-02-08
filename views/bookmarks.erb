@@ -1,1 +1,17 @@
 <h1>  Bookmarks </h1>
+
+
+<% if @bookmarks %>
+  <ul>
+
+    <% @bookmarks.each do |element| %>
+      <li> <a href="<%= element %>"><%= element%></a></li>
+    <% end %>
+
+  </ul>
+
+<% end %>
+
+
+<a href="new_bookmark">Add a new bookmark!</a>
+
